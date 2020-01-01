@@ -227,7 +227,7 @@ fi
 
 #CORE_URLS=$(curl $CURL_RETRY $SSL_SECURITY_OPTION -sLf "https://github.com/jotego/jtbin/wiki" | grep -io '\(https://github.com/jotego/jtbin/tree/master/mister/[a-zA-Z0-9./_-]*\)\|\(user-content-[a-z-]*\)')
 
-CORE_URLS=$(curl $CURL_RETRY $SSL_SECURITY_OPTION -sLf "https://github.com/amoore2600/SNAC" | grep -io '\(https://github.com/amoore2600/SNAC/tree/master/_SNAC/[a-zA-Z0-9./_-]*\)\|\(user-content-[a-z-]*\)')
+CORE_URLS=$(curl $CURL_RETRY $SSL_SECURITY_OPTION -sLf "https://github.com/amoore2600/SNAC/tree/master/_SNAC/')
 
 
 CORE_CATEGORY="-"
