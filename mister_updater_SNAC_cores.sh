@@ -434,31 +434,31 @@ function checkCoreURL {
 	echo ""
 }
 
-for CORE_URL in $CORE_URLS; do
-
-	if [[ $CORE_URL == https://* ]]
-	then
-		if [ "$REPOSITORIES_FILTER" == "" ] || { echo "$CORE_URL" | grep -qi "$REPOSITORIES_FILTER";  } || { echo "$CORE_CATEGORY" | grep -qi "$CORE_CATEGORIES_FILTER";  }
-		then
-			if echo "$CORE_URL" | grep -qE "(SD-Installer)|(/Main_MiSTer$)|(/Menu_MiSTer$)"
-			then
-				checkCoreURL
-			else
-				[ "$PARALLEL_UPDATE" == "true" ] && { echo "$(checkCoreURL)"$'\n' & } || checkCoreURL
-			fi
-		fi
-	else
-		CORE_CATEGORY=$(echo "$CORE_URL" | sed 's/user-content-//g')
-		if [ "$CORE_CATEGORY" == "" ]
-		then
-			CORE_CATEGORY="-"
-		fi
-		if [ "$CORE_CATEGORY" == "computer-cores" ]
-		then
-			CORE_CATEGORY="cores"
-		fi
-	fi
-done
+#for CORE_URL in $CORE_URLS; do
+#
+#	if [[ $CORE_URL == https://* ]]
+#	then
+#		if [ "$REPOSITORIES_FILTER" == "" ] || { echo "$CORE_URL" | grep -qi "$REPOSITORIES_FILTER";  } || { echo "$CORE_CATEGORY" | grep -qi "$CORE_CATEGORIES_FILTER";  }
+#		then
+#			if echo "$CORE_URL" | grep -qE "(SD-Installer)|(/Main_MiSTer$)|(/Menu_MiSTer$)"
+#			then
+#				checkCoreURL
+#			else
+#				[ "$PARALLEL_UPDATE" == "true" ] && { echo "$(checkCoreURL)"$'\n' & } || checkCoreURL
+#			fi
+#		fi
+#	else
+#		CORE_CATEGORY=$(echo "$CORE_URL" | sed 's/user-content-//g')
+#		if [ "$CORE_CATEGORY" == "" ]
+#		then
+#			CORE_CATEGORY="-"
+#		fi
+#		if [ "$CORE_CATEGORY" == "computer-cores" ]
+#		then
+#			CORE_CATEGORY="cores"
+#		fi
+#	fi
+#done
 wait
 
 echo "Done!"
