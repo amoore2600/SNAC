@@ -144,7 +144,7 @@ TO_BE_DELETED_EXTENSION="to_be_deleted"
 
 
 #echo +------------------------------------------------------------------------------+
-echo "Beta SNAC Cores - Use at your own risk. 
+echo "Beta SNAC Cores - Use at your own risk." 
 #echo +------------------------------------------------------------------------------+
  
 sleep 2
