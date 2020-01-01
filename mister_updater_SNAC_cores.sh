@@ -386,7 +386,7 @@ function checkCoreURL {
 				then
 					SD_INSTALLER_PATH="$CURRENT_DIR/$FILE_NAME"
 				fi
-				if [ "$CORE_CATEGORY" == "arcade-cores" ]
+				if [ "$CORE_CATEGORY" == "snac-cores" ]
 				then
 					OLD_IFS="$IFS"
 					IFS="|"
