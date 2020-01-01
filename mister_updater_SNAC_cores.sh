@@ -73,10 +73,10 @@ BASE_PATH="/media/fat"
 #Directories where all core categories will be downloaded.
 declare -A CORE_CATEGORY_PATHS
 #CORE_CATEGORY_PATHS["cores"]="$BASE_PATH/_Computer"
-#CORE_CATEGORY_PATHS["console-cores"]="$BASE_PATH/_Console"
+CORE_CATEGORY_PATHS["console-cores"]="$BASE_PATH/_SNAC"
 #CORE_CATEGORY_PATHS["arcade-cores"]="$BASE_PATH/_Arcade"
 #CORE_CATEGORY_PATHS["service-cores"]="$BASE_PATH/_Utility"
-CORE_CATEGORY_PATHS["snac-cores"]="$BASE_PATH/_SNAC"
+#CORE_CATEGORY_PATHS["snac-cores"]="$BASE_PATH/_SNAC"
 
 #Optional pipe "|" separated list of directories containing alternative arcade cores to be updated,
 #each alternative (hack/revision/whatever) arcade is a subdirectory with the name starting like the rbf core with an underscore prefix,
